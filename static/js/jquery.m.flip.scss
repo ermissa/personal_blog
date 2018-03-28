@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+/**
+ * M Flip SASS mixin
+ * <div class="box m-flip">
+ *   <div class="front"> Hi I'm the front </div>
+ *   <div class="back"> Hi I'm the back </div>
+ * </div>
+ */
+$m-flip-width: 250px !default;
+$m-flip-height: $m-flip-width !default;
+$m-flip-rotation: 180deg !default;
+
+.m-flip{
+  @include perspective(1000);
+
+  &,
+  .front, .back {
+    @include box-sizing(border-box);
+    width: $m-flip-width;
+    height: $m-flip-height;
+  }
+
+  .m-flip__content {
+    @include transition(0.6s);
+    @include transform-style(preserve-3d);
+
+    &.active,
+    &:hover{ @include rotateY($m-flip-rotation); }
+  }
+
+  .front, .back {
+    position: absolute;
+    top: 0; left: 0;
+    @include backface-visibility(hidden);
+  }
+
+  .front { z-index: 2; }
+  .back { @include rotateY(180deg); }
+}
