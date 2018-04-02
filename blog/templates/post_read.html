@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
 
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
 <style>
 
     .post_content {
@@ -20,14 +22,21 @@
         font-family: 'Source Serif Pro', serif;
         font-size:20px;
     }
-
+    .post_container {
+        background-color:#FFFFFF;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+    }
+    body {
+        background-color: #e1e4e8;
+    }
 </style>
 </head>
 
 <body>
     <div class="row">
 
-        <div class="col-md-8 offset-md-1" style="border:2px #e1e4e8 solid; background-color:#e1e4e8; height:500px; margin-top:40px;">
+        <div class="col-md-8 offset-md-1 post_container" style="height:500px; margin-top:40px;">
             <header class="post_header">
                 <h1 style="margin-top:20px;margin-bottom:20px;">Why do we humans make mistakes?</h1>    
                 <i class="fa fa-calendar" style="margin-left:10px;"></i> Post DATE
@@ -41,8 +50,7 @@
         </div>
 
         <div class="col-md-2" style=" height:500px; margin-top:40px;">
-                <div style="border:2px #e1e4e8 solid; background-color:#e1e4e8;height:500px;">
-                
+                <div class="post_container" style="height:500px;">
                 </div>
         </div>
     </div>

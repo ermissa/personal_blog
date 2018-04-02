@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     path('',views.blogHomePage,name="home"),
+    path('postread',views.postReadPage,name="postread")
 ]
 
