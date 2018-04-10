@@ -1,0 +1,168 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_nonmatrix.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/footer-distributed-with-contact-form.css'%}">
+    <link rel="stylesheet" href="{% static 'css/demo.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <a id="hamburger-icon"></a>
+    <div id="nav-container">
+        <div class="bars-container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="nav-inner">
+
+            <a id="logo">LOGO</a>
+
+            <ul>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <form id="search_top" method="post">
+                        <input type="text" class="search_textbox" placeholder="Search">
+                        <button type="submit" class="search_button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div id="main_container">
+    <div id="aciklama" class="col-md-12">
+        <br> Hello world!
+        <br> My name is Fatih. I'm student at Computer Engineering department in ITU. I love coding and datascience.
+    </div>
+
+    <div class="skills_title col-md-12" style="margin-top:30px;z-index:1000;text-align:center">
+        Skills&Interest
+    </div>
+
+    <div class="row col-md-12 skills">
+
+        <div class="front abilities col-md-2 offset-md-1">
+            <img id="abilities_element" src="{% static 'images/python.png'%}" style="max-width:100%;max-height:100%;">
+        </div>
+
+        <div class="abilities col-md-2">
+            <img id="abilities_element" src="{% static 'images/golang.png'%}" style="max-width:100%;max-height:100%;">
+        </div>
+
+        <div class="abilities col-md-2">
+            <img id="abilities_element" src="{% static 'images/android.png'%}" style="max-width:100%;max-height:100%;">
+        </div>
+
+        <div class="abilities col-md-2">
+            <img id="abilities_element" src="{% static 'images/angular.png'%}" style="max-width:100%;max-height:100%;">
+        </div>
+
+        <div class="abilities col-md-2">
+            <img id="abilities_element" src="{% static 'images/unity.png'%}" style="max-width:100%;max-height:100%;">
+        </div>
+    </div>
+</div>
+</body>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Company<span>logo</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            ·
+            <a href="#">Blog</a>
+            ·
+            <a href="#">Pricing</a>
+            ·
+            <a href="#">About</a>
+            ·
+            <a href="#">Faq</a>
+            ·
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">SFE &copy; 2018</p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p>Contact Us</p>
+
+        <form action="#" method="post">
+
+            <input type="text" name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Send</button>
+
+        </form>
+
+    </div>
+
+</footer>
+
+
+</html>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // set up hover panels
+        // although this can be done without JavaScript, we've attached these events
+        // because it causes the hover to be triggered when the element is tapped on a touch device
+        $('.hover').hover(function () {
+            $(this).addClass('flip');
+        }, function () {
+            $(this).removeClass('flip');
+        });
+    });
+</script>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+    $(document).ready(function () {
+        $(".bars-container").click(function () {
+            $("#nav-inner ul").toggleClass("open");
+        });
+    });
+</script>
+
+</body>
+</html>

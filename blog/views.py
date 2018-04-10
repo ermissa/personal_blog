@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Posts,Comments
 
+def homepage(request):
+    return render(request,'homepage.html')
+
 def index(request):
     taken_posts = Posts.objects.order_by('-pub_date')[:2]
     return HttpResponse("Hello W0r1d")
