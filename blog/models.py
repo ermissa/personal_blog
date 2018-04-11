@@ -15,3 +15,10 @@ class Comments(models.Model):
     comment_text = models.TextField()
     def __str__(self):
         return self.comment_text
+
+
+class Categories(models.Model):
+    CategoryName = models.CharField(max_length=100)
+class CategoryPost():
+    postID = models.ForeignKey(Posts,on_delete=models.CASCADE)
+    categoryID = models.ForeignKey(Categories,on_delete=models.CASCADE)
