@@ -7,7 +7,7 @@ def homepage(request):
 
 def blogHomePage(request):
 #    latest_post = Posts.objects.get(id=1)
-    latest_post = Posts.objects.all()    
+    latest_post = Posts.objects.all()
     context = {'context':latest_post}
     return render(request,'blog.html',context)
 

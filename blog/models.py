@@ -6,6 +6,8 @@ class Posts(models.Model):
     pub_date = models.DateTimeField('date published')
     post_image = models.ImageField(upload_to="static/images")
     post_author = models.CharField(max_length=100)
+    deneme = models.CharField(max_length=190)
+    slug=models.SlugField(unique=True)
 
     def __str__(self):
         return self.post_body
