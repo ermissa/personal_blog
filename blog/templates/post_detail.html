@@ -44,12 +44,12 @@
 
         <div class="col-md-8 offset-md-1 post_container" style="margin-top:40px;margin-bottom:20px;">
             <header class="post_header">
-                <h1 style="margin-top:20px;margin-bottom:20px;">Why do we humans make mistakes?</h1>    
+                <h1 style="margin-top:20px;margin-bottom:20px;">{{post.title}}</h1>    
                 <div class="col-md-8" style="margin:0 auto;">
                     <img class="post_image" src="{% static 'images/'%}{{post.post_image}}">
                 </div>
                 <div style="margin-top:20px;">
-                    <i class="fa fa-calendar" style="margin-left:10px;"></i> {{post.post_date}}
+                    <i class="fa fa-calendar" style="margin-left:10px;"></i> {{post.pub_date}}
                     <i class="fa fa-user" style="margin-left:20px;"></i> {{post.post_author}}
                     <i class="fa fa-tags" style="margin-left:20px;"></i> {{post.post_category}}
                 </div>
