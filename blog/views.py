@@ -11,5 +11,5 @@ def blogHomePage(request):
     context = {'context':latest_post}
     return render(request,'blog.html',context)
 
-def postReadPage(request):
-    return render(request,'post_read.html')
+def postDetailPage(request):
+    return render(request,'post_detail.html')

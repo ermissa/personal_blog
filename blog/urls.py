@@ -5,6 +5,6 @@ from . import views
 
 urlpatterns = [
     path('',views.blogHomePage,name="bloghome"),
-    path('/<str:post_title>/',views.postReadPage,name="postread")
+    path(r'(?P<slug>[\w-]+)/$',views.postDetailPage,name="post_detail")
 ]
 

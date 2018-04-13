@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.template.defaultfilters import slugify
 class Posts(models.Model):
     post_title = models.CharField(max_length=200)
     post_body = models.TextField()
@@ -8,6 +8,12 @@ class Posts(models.Model):
     post_author = models.CharField(max_length=100)
     deneme = models.CharField(max_length=190)
     slug=models.SlugField(unique=True)
+
+    def save(self, *args, **kwargs): #We overrided save function to create slug field with post_title field automaticaly.#
+        if not self.id:
+            # Newly created object, so set slug
+            self.s = slugify(self.post_title)
+        super(Posts, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.post_body
