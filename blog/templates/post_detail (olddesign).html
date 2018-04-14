@@ -18,6 +18,7 @@
 <style>
 
     .post_content {
+        font-family: 'EB Garamond', serif;
         font-family: 'Source Serif Pro', serif;
         font-size:20px;
     }
@@ -35,40 +36,15 @@
         height:100%;
         object-fit: contain;
     }
-
-    .make-circle {
-        border-radius: 60%;
-    }
-
-    .yazi { 
-        word-wrap: break-word;
-    }
-    .icon_style {
-        font-size:25px;
-        text-align: center;
-        margin-top:20px;
-    }
 </style>
 </head>
 
 <body>
-    <div class="col-md-12">
-        <div class="col-md-2 offset-md-1 post_container" style="margin-top:40px;margin-bottom:20px;float:left;">
-            <div>
-                <img src="../static/images/flower.jpg" class="img-thumbnail make-circle">
-            </div>
-            <div class="icon_style">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-                <p style="font-size:15px;font-family: 'EB Garamond', serif;">ermissaim@gmail.com</p>
-            </div>
-        </div>
+    <div class="row col-md-12">
 
-        <div class="col-md-7 post_container" style="margin-left:40px; margin-top:40px;margin-bottom:20px;float:left;">
+        <div class="col-md-8 offset-md-1 post_container" style="margin-top:40px;margin-bottom:20px;">
             <header class="post_header">
-                <h1 style="margin-top:20px;margin-bottom:20px;">{{post.post_title}}</h1>    
+                <h1 style="margin-top:20px;margin-bottom:20px;">{{post.title}}</h1>    
                 <div class="col-md-8" style="margin:0 auto;">
                     <img class="post_image" src="{% static 'images/'%}{{post.post_image}}">
                 </div>
@@ -79,9 +55,14 @@
                 </div>
             </header>
             <hr>
-            <div class="post_content yazi">
+            <div class="post_content">
                 <p>{{post.post_body}}</p>
             </div>
+        </div>
+
+        <div class="col-md-2" style="margin-top:40px;">
+                <div class="post_container" style="height:500px;">
+                </div>
         </div>
     </div>
 </body>
