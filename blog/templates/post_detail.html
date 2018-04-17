@@ -48,12 +48,35 @@
         text-align: center;
         margin-top:20px;
     }
+
+    .navbar_fonts {
+        line-height: 40px;
+    }
 </style>
 </head>
 
 <body>
     <div class="col-md-12">
-        <div class="col-md-2 offset-md-1 post_container" style="margin-top:40px;margin-bottom:20px;float:left;">
+        <div class="row col-md-10 offset-md-1 post_container" style="margin-top:20px;">
+            <div class="col-md-3 offset-md-2">
+                <a href="#" style="color:black">
+                    <div class="navbar_fonts">HOME</div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" style="color:black">
+                    <div class="navbar_fonts">HOME</div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" style="color:black">
+                    <div class="navbar_fonts">HOME</div>
+                </a>
+            </div>        
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-2 offset-md-1" style="margin-top:40px;margin-bottom:20px;float:left;">
             <div>
                 <img src="../static/images/flower.jpg" class="img-thumbnail make-circle">
             </div>
@@ -66,7 +89,7 @@
             </div>
         </div>
 
-        <div class="col-md-7 post_container" style="margin-left:40px; margin-top:40px;margin-bottom:20px;float:left;">
+        <div class="col-md-7  post_container" style="margin-left:40px;margin-top:40px;margin-bottom:20px;float:left;">
             <header class="post_header">
                 <h1 style="margin-top:20px;margin-bottom:20px;">{{post.post_title}}</h1>    
                 <div class="col-md-8" style="margin:0 auto;">
