@@ -6,55 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css'%}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
     
     <link rel="stylesheet" href="{% static 'css/navbar_demo.css' %}">
     <link rel="stylesheet" href="{% static 'css/navigation-round.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
 
-    <style>
-        body {
-            background-color:#ECF0F5;
-        }
-        .post {
-            height: 200px;
-            margin-top:30px;
-            margin-bottom: 30px;
-            background:#FFFFFF;
-            border:2px #e1e4e8 solid; 
-            border-radius:10px;
-        }
-        .baslik {
-            width:50px; 
-            word-wrap: break-word;
-        }
-        .yazi {
-            width:50px; 
-            word-wrap: break-word;
-        }
-        .post_image {
-            width:100%;
-            height:100%;
-            object-fit: contain;
-        }
-    </style>
 </head>
 
 <body>
     <div class="navbar-menu">
-        <nav class="menu-navigation-round">
+        <nav class="menu-navigation-round" style="font-size:30px;">
             <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Services</a>
-            <a href="#">Reach us</a>
+            <a href="#">About Me</a>
+            <a href="#">Archive</a>
+            <a href="#">Contact</a>
             <a href="#" class="selected">About</a>
         </nav>
     </div>
-
-    {% block content %}
-    {% endblock %}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
     
@@ -78,5 +48,9 @@
     
     
     </script>
+
+    {% block content %}
+    {% endblock %}
+
 </body>
 </html>

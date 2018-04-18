@@ -1,0 +1,44 @@
+    body {
+        background-color:#F6F6F6;
+    }
+    .post {
+
+        margin-top:30px;
+        margin-bottom: 30px;
+        background:#FFFFFF;
+        border:2px #e1e4e8 solid; 
+        border-radius:10px;
+    }
+
+    .baslik_2{
+        margin-left:20px;
+        margin-top:10px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .baslik h2{
+        font-size:40px;
+        letter-spacing:0.05em;
+        line-height:2;
+        font-weight:600;
+    }
+
+    .yazi_2{
+        margin-left:20px;
+        margin-top:10px;
+    }
+
+    .baslik {
+        width:50px; 
+        word-wrap: break-word;
+    }
+    .yazi {
+        width:50px; 
+        word-wrap: break-word;
+    }
+    .post_image {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+    }

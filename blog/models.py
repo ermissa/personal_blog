@@ -4,9 +4,8 @@ class Posts(models.Model):
     post_title = models.CharField(max_length=200)
     post_body = models.TextField()
     pub_date = models.DateTimeField('date published')
-    post_image = models.ImageField(upload_to="static/images")
+    #post_image = models.ImageField(upload_to="static/images")#
     post_author = models.CharField(max_length=100)
-    deneme = models.CharField(max_length=190)
     slug=models.SlugField(unique=True)
 
     def save(self, *args, **kwargs): #We overrided save function to create slug field with post_title field automaticaly.#

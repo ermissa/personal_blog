@@ -8,7 +8,6 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
     <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
@@ -91,10 +90,7 @@
 
         <div class="col-md-7  post_container" style="margin-left:40px;margin-top:40px;margin-bottom:20px;float:left;">
             <header class="post_header">
-                <h1 style="margin-top:20px;margin-bottom:20px;">{{post.post_title}}</h1>    
-                <div class="col-md-8" style="margin:0 auto;">
-                    <img class="post_image" src="{% static 'images/'%}{{post.post_image}}">
-                </div>
+                <h1 style="margin-top:20px;margin-bottom:20px;">{{post.post_title}}</h1>
                 <div style="margin-top:20px;">
                     <i class="fa fa-calendar" style="margin-left:10px;"></i> {{post.pub_date}}
                     <i class="fa fa-user" style="margin-left:20px;"></i> {{post.post_author}}
