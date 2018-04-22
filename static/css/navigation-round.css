@@ -22,12 +22,22 @@
     margin: 0 5px auto;
 }
 
+.menu-navigation-round a:hover {
+	background-color:#F05283;
+	transition:0.2s;
+    color:#fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 5px auto;
+}
+
+/*
 .menu-navigation-round a.selected:hover {
 	background-color:#F05283;
 	transition:0.2s;
 	color:#fff;
 }
-
+*/
 /* Making the navigation menu responsive */
 
 .slicknav_menu {

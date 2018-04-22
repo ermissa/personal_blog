@@ -1,13 +1,20 @@
 {%extends 'base.html'%}
 {%load static%}
 
+{%block navbar_assets%}
+    <link rel="stylesheet" href="{% static 'css/navbar_demo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navigation-round.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+{%endblock navbar_assets%}
+
     {%block document_navbar%}
     <div class="navbar-menu">
         <nav class="menu-navigation-round" style="font-size:30px;">
             <a href="#">Home</a>
+            <a href="{% url 'bloghome'%}">Blog</a>
             <a href="#">Archive</a>
             <a href="#">Contact</a>
-            <a href="#" class="selected">About Me</a>
+            <a href="#">About Me</a>
         </nav>
     </div>
     {% endblock document_navbar%}

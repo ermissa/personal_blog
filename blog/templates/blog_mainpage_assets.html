@@ -2,15 +2,11 @@
 
 {%load static%}
     {% block page_title %} Blog Posts {% endblock page_title %}
-    {% block document_assets%}
+    {% block body_assets%}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css'%}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
-    
-    <link rel="stylesheet" href="{% static 'css/navbar_demo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/navigation-round.css' %}">
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
-    {%endblock document_assets%}
+    {%endblock body_assets%}

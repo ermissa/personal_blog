@@ -3,14 +3,15 @@
 <html>
     <head>
         <title>{% block page_title %} {% endblock page_title%}</title>
-        {% block document_assets%} {%endblock document_assets%}
+        {% block navbar_assets%} {%endblock navbar_assets%}
+        {% block footer_assets%} {%endblock footer_assets%}
+        {% block body_assets%} {%endblock body_assets%}        
     </head>
 
     <body>
         {% block document_navbar %} {% endblock document_navbar %}
-        {% block document_body %}
-        <footer id="myblog_footer">{% block document_footer %} {% endblock document_footer%}</footer>
-        {% endblock document_body %}
+        {% block document_body %}   {% endblock document_body %}
+        {% block document_footer %} {% endblock document_footer%}
     </body>
         {% block js_codes %} {% endblock js_codes%}
 </html>
