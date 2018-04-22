@@ -1,0 +1,60 @@
+{% extends 'navbar.html'%}
+
+{%load static%}
+    {% block page_title %} Blog Posts {% endblock page_title %}
+    {% block document_assets%}
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/navbar_demo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navigation-round.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">    
+
+<style>
+
+    .post_content {
+        font-family: 'Source Serif Pro', serif;
+        font-size:20px;
+    }
+    .post_container {
+        background-color:#FFFFFF;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+    }
+    body {
+        background-color: #e1e4e8;
+    }
+
+    .post_image {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+    }
+
+    .make-circle {
+        border-radius: 60%;
+    }
+
+    .yazi { 
+        word-wrap: break-word;
+    }
+    .icon_style {
+        font-size:25px;
+        text-align: center;
+        margin-top:20px;
+    }
+
+    .navbar_fonts {
+        line-height: 40px;
+    }
+</style>    
+    {%endblock document_assets%}

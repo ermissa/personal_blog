@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{% block page_title %} {% endblock page_title%}</title>
+        {% block document_assets%} {%endblock document_assets%}
+    </head>
+
+    <body>
+        {% block document_navbar %} {% endblock document_navbar %}
+        {% block document_body %}
+        <footer id="myblog_footer">{% block document_footer %} {% endblock document_footer%}</footer>
+        {% endblock document_body %}
+    </body>
+        {% block js_codes %} {% endblock js_codes%}
+</html>

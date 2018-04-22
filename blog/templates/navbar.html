@@ -1,30 +1,18 @@
+{%extends 'base.html'%}
 {%load static%}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css'%}" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
-    
-    <link rel="stylesheet" href="{% static 'css/navbar_demo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/navigation-round.css' %}">
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
 
-</head>
-
-<body>
+    {%block document_navbar%}
     <div class="navbar-menu">
         <nav class="menu-navigation-round" style="font-size:30px;">
             <a href="#">Home</a>
-            <a href="#">About Me</a>
             <a href="#">Archive</a>
             <a href="#">Contact</a>
-            <a href="#" class="selected">About</a>
+            <a href="#" class="selected">About Me</a>
         </nav>
     </div>
+    {% endblock document_navbar%}
+
+    {%block js_codes%} 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
     
@@ -48,9 +36,4 @@
     
     
     </script>
-
-    {% block content %}
-    {% endblock %}
-
-</body>
-</html>
+    {%endblock js_codes%}
