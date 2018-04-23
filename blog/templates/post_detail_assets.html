@@ -14,18 +14,40 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}"/>
  
+    
 
 <style>
+    @media screen 
+    and (min-width: 1200px) 
+    and (max-width: 1600px) 
+    {
+        .post_container {
+            background-color:#FFFFFF;
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+            border-radius: 3px;
+            margin-left:40px;
+            margin-top:40px;
+            margin-bottom:20px;
+            float:left;
+        }
+    }
+
+    .post_container {
+        background-color:#FFFFFF;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+        margin-bottom:30px;
+        float:left;
+    }
+
 
     .post_content {
         font-family: 'Source Serif Pro', serif;
         font-size:20px;
     }
-    .post_container {
-        background-color:#FFFFFF;
-        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-        border-radius: 3px;
-    }
+
+
+
     body {
         background-color: #e1e4e8;
     }
