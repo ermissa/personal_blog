@@ -1,0 +1,31 @@
+{% extends 'blog_mainpage_assets.html' %}
+{%load static%}
+
+{% if is_paginated %}
+    {% block document_body%}
+        <div class="container" style="margin-top:40px;">
+                {%for page in paginator.page_range%}
+                <div class="post">
+                        <div class="baslikveyazi">
+                            <div class="baslik_2">
+                                <h2><a href="{% url 'post_detail' post.slug %}">{{post.post_title}}</a></h2>
+                            </div>
+                            <div class="yazi_2">
+                                <div style="word-wrap: break-word;"><p style="font-size:20px;line-height:2;">{{post.post_body|truncatechars:100}}</p></div>
+                            </div>
+                        </div>
+                </div>
+                
+                {%endfor%}
+
+                {% if page_obj.has_next %} 
+                <a href="{% url 'bloghome' %}?page={{page.previous_page_number}}">Back</a>
+                {% endif %}                
+                {% if page_obj.has_previous %}                
+                <a href="{% url 'bloghome' %}?page={{page.next_page_number}}">Next</a>
+                {% endif %}
+
+
+        </div>
+    {% endblock document_body%}
+{% endif %}

@@ -3,9 +3,14 @@ from django.http import HttpResponse
 from .models import Posts,Comments
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator,EmptyPage
+from django.views.generic import ListView
 import logging
 logger = logging.getLogger(__name__)
 
+class PostListView(ListView):
+    model = Posts
+    paginate_by = 3
+    template_name = 'blog_classbased.html'
 
 def homepage(request):
     return render(request,'homepage.html')
@@ -17,7 +22,6 @@ def getPosts(request,selected_page=1):
     logger.info("The value of var is %s", selected_page)
     #logger.debug(selected_page)
     #message = request.GET.get('message')
-
     try:
         returned_page = pages.get_page(selected_page)
     except EmptyPage:

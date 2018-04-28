@@ -37,6 +37,11 @@ pages = Paginator(posts,3) #Show 5 post per page
 logger.info("The value of var is %s", selected_page)
 #logger.debug(selected_page)
 #message = request.GET.get('message')
+posts = Posts.objects.all()
+pages = Paginator(posts,3) #Show 5 post per page
+logger.info("The value of var is %s", selected_page)posts = Posts.objects.all()
+pages = Paginator(posts,3) #Show 5 post per page
+logger.info("The value of var is %s", selected_page)
                     </code>
                 </pre>
             </div>
