@@ -10,7 +10,7 @@ def homepage(request):
 def getPosts(request,selected_page=1):
 #    latest_post = Posts.objects.get(id=1)
     posts = Posts.objects.all().order_by('-pub_date')
-    pages = Paginator(posts,5) #Show 5 post per page
+    pages = Paginator(posts,3) #Show 5 post per page
     try:
         returned_page = pages.page(selected_page)
     except EmptyPage:
