@@ -8,6 +8,7 @@ urlpatterns = [
     path('',views.getPosts,name="bloghome"),
     path('/<int:selected_page>/',views.getPosts,name="bloghome"),
     path('<slug>/',views.postDetailPage,name="post_detail")
+    #re_path(r'^(?P<selected_year>[0-9]{4})/$$',views.getPosts,name="bloghome")
     #I am learning when I writing this blog so I decided not to delete following lines. These mistakes maybe beneficial for someone.#
     #! FOR url() FUNCTION : FROM DJANGO DOCUMENTATIONS : "It’s likely to be deprecated in a future release."
     

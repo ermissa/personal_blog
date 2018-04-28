@@ -3,16 +3,23 @@ from django.http import HttpResponse
 from .models import Posts,Comments
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator,EmptyPage
+import logging
+logger = logging.getLogger(__name__)
+
 
 def homepage(request):
     return render(request,'homepage.html')
 
 def getPosts(request,selected_page=1):
 #    latest_post = Posts.objects.get(id=1)
-    posts = Posts.objects.all().order_by('-pub_date')
+    posts = Posts.objects.all()
     pages = Paginator(posts,3) #Show 5 post per page
+    logger.info("The value of var is %s", selected_page)
+    #logger.debug(selected_page)
+    #message = request.GET.get('message')
+
     try:
-        returned_page = pages.page(selected_page)
+        returned_page = pages.get_page(selected_page)
     except EmptyPage:
         returned_page = pages.page(pages.num_pages)
     #content = pages.page(selected_page)    
