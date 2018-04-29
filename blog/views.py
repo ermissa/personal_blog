@@ -15,21 +15,18 @@ class PostListView(ListView):
 def homepage(request):
     return render(request,'homepage.html')
 
-def getPosts(request,selected_page=1):
-#    latest_post = Posts.objects.get(id=1)
+
+def getPosts(request):
     posts = Posts.objects.all()
-    pages = Paginator(posts,3) #Show 5 post per page
-    logger.info("The value of var is %s", selected_page)
-    #logger.debug(selected_page)
-    #message = request.GET.get('message')
+    pages = Paginator(posts, 3) #Show 3 post per page
+    selected_page = request.GET.get('page', 1)
     try:
         returned_page = pages.get_page(selected_page)
     except EmptyPage:
-        returned_page = pages.page(pages.num_pages)
-    #content = pages.page(selected_page)    
+        returned_page = pages.page(pages.num_pages) 
     return render(request,'blog.html',{'page':returned_page,
-                                       'posts':returned_page.object_list
-                                        })
+                                    'posts':returned_page.object_list
+                                    })
 
 def postDetailPage(request,slug):
     post = get_object_or_404(Posts, slug=slug)
