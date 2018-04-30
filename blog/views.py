@@ -15,6 +15,8 @@ class PostListView(ListView):
 def homepage(request):
     return render(request,'homepage.html')
 
+def Login(request):
+    return render(request,'login.html')
 
 def getPosts(request):
     posts = Posts.objects.all()
